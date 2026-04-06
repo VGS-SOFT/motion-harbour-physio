@@ -25,7 +25,7 @@ export default function Hero() {
               <a href="#contact" className="btn-arrow">
                 Book appointment <span className="arrow">→</span>
               </a>
-              <a href="#fees" className="btn btn-outline">Fees & rebates</a>
+              <a href="#fees" className="btn btn-outline">Fees &amp; rebates</a>
             </div>
           </div>
 
@@ -51,7 +51,7 @@ export default function Hero() {
       <div className={styles.imageStrip}>
         <div className={`${styles.imgCard} ${styles.imgCard1}`}>
           <div className={styles.imgInner}>
-            <span className={styles.imgLabel}>Back & Neck</span>
+            <span className={styles.imgLabel}>Back &amp; Neck</span>
           </div>
         </div>
         <div className={`${styles.imgCard} ${styles.imgCard2}`}>
@@ -61,7 +61,7 @@ export default function Hero() {
         </div>
         <div className={`${styles.imgCard} ${styles.imgCard3}`}>
           <div className={styles.imgInner}>
-            <span className={styles.imgLabel}>Knee & Shoulder</span>
+            <span className={styles.imgLabel}>Knee &amp; Shoulder</span>
           </div>
         </div>
       </div>

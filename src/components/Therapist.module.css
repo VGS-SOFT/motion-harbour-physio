@@ -1,63 +1,71 @@
+.section {}
 .layout {
   display: grid;
-  grid-template-columns: 400px 1fr;
+  grid-template-columns: 1fr 1.4fr;
   gap: var(--space-16);
   align-items: start;
 }
-.imgCol {}
+.imgCol { position: sticky; top: 120px; }
 .imgBox {
-  width: 100%;
-  aspect-ratio: 3/4;
-  border-radius: var(--radius-2xl);
-  background: linear-gradient(160deg, var(--color-dark-bg), var(--color-dark-surface));
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  overflow: visible;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  background: var(--color-surface-card);
+  aspect-ratio: 5/6;
 }
-.initials {
-  font-family: var(--font-display);
-  font-size: 5rem;
-  font-weight: 700;
-  color: rgba(255,255,255,0.15);
-  font-style: italic;
-  letter-spacing: -0.03em;
+.therapistPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 600ms var(--ease);
+}
+.imgBox:hover .therapistPhoto {
+  transform: scale(1.03);
 }
 .imgBadge {
   position: absolute;
-  bottom: -1rem;
-  right: -1rem;
+  bottom: var(--space-4);
+  right: var(--space-4);
   background: var(--color-surface);
-  border: 1px solid var(--color-border-light);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   padding: var(--space-3) var(--space-4);
-  box-shadow: var(--shadow-md);
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  align-items: center;
+  box-shadow: var(--shadow-md);
 }
-.badgeNum { font-size: var(--text-sm); font-weight: 700; color: var(--color-text); }
-.badgeSub { font-size: var(--text-xs); color: var(--color-text-faint); }
-
+.badgeNum {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: 0.06em;
+}
+.badgeSub {
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
 .textCol {
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
-  padding-top: var(--space-4);
+  padding-top: var(--space-2);
 }
 .creds {
   font-size: var(--text-sm);
   color: var(--color-text-faint);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.04em;
-  margin-top: calc(var(--space-5) * -1);
+  text-transform: uppercase;
 }
 .bio {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--color-text-muted);
   line-height: 1.75;
-  max-width: 56ch;
 }
 .approachGrid {
   display: grid;
@@ -66,25 +74,20 @@
 }
 .approachItem {
   display: flex;
-  align-items: center;
-  gap: var(--space-3);
+  align-items: flex-start;
+  gap: var(--space-2);
   font-size: var(--text-sm);
-  font-weight: 500;
-  color: var(--color-text);
+  color: var(--color-text-muted);
 }
 .tick {
-  width: 20px; height: 20px;
-  border-radius: 50%;
-  border: 1.5px solid var(--color-divider);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.65rem;
-  color: var(--color-text-muted);
+  color: var(--color-text);
+  font-weight: 700;
   flex-shrink: 0;
+  margin-top: 1px;
 }
 @media (max-width: 860px) {
   .layout { grid-template-columns: 1fr; }
-  .imgBox { aspect-ratio: 4/3; max-height: 320px; }
+  .imgCol { position: static; }
+  .imgBox { max-width: 380px; }
   .approachGrid { grid-template-columns: 1fr; }
 }

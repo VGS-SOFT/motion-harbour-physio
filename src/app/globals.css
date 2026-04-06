@@ -143,7 +143,6 @@ a, button, [role='button'] {
   white-space: nowrap;
   transition: all var(--transition);
 }
-/* Primary — solid black */
 .btn-primary {
   background: var(--color-black);
   color: var(--color-white);
@@ -152,7 +151,6 @@ a, button, [role='button'] {
 .btn-primary:hover { background: var(--color-black-hover); transform: translateY(-1px); box-shadow: var(--shadow-md); }
 .btn-primary:active { transform: translateY(0); }
 
-/* Outline on light bg */
 .btn-outline {
   background: transparent;
   color: var(--color-text);
@@ -160,7 +158,6 @@ a, button, [role='button'] {
 }
 .btn-outline:hover { border-color: var(--color-black); background: var(--color-surface-warm); }
 
-/* Outline on dark bg */
 .btn-outline-light {
   background: transparent;
   color: var(--color-dark-text);
@@ -168,7 +165,6 @@ a, button, [role='button'] {
 }
 .btn-outline-light:hover { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.2); }
 
-/* White on dark bg */
 .btn-white {
   background: var(--color-white);
   color: var(--color-black);
@@ -176,7 +172,6 @@ a, button, [role='button'] {
 }
 .btn-white:hover { background: var(--color-surface-warm); transform: translateY(-1px); }
 
-/* Arrow pill (icon + text) */
 .btn-arrow {
   background: var(--color-black);
   color: var(--color-white);
@@ -200,14 +195,12 @@ a, button, [role='button'] {
   font-size: 0.75rem;
 }
 
-/* Section shells */
 .section { padding-block: clamp(var(--space-12), 7vw, var(--space-24)); }
 .section--dark  { background: var(--color-dark-bg); }
 .section--warm  { background: var(--color-surface-warm); }
 .section--white { background: var(--color-surface); }
 .section--card  { background: var(--color-surface-card); }
 
-/* Labels */
 .section-label {
   display: inline-block;
   font-family: var(--font-body);
@@ -220,7 +213,6 @@ a, button, [role='button'] {
 }
 .section-label--light { color: var(--color-dark-muted); }
 
-/* Headings */
 .section-heading {
   font-family: var(--font-display);
   font-size: var(--text-2xl);
@@ -230,10 +222,7 @@ a, button, [role='button'] {
   line-height: 1.1;
   letter-spacing: -0.02em;
 }
-.section-heading em {
-  font-style: italic;
-  font-weight: 400;
-}
+.section-heading em { font-style: italic; font-weight: 400; }
 .section-heading--light { color: var(--color-dark-text); }
 
 .section-sub {
@@ -244,7 +233,6 @@ a, button, [role='button'] {
 }
 .section-sub--light { color: var(--color-dark-muted); }
 
-/* Card */
 .card {
   background: var(--color-surface);
   border-radius: var(--radius-xl);
@@ -264,7 +252,6 @@ a, button, [role='button'] {
   border-color: var(--color-dark-border);
 }
 
-/* Tag */
 .tag {
   display: inline-flex;
   align-items: center;
@@ -281,3 +268,20 @@ a, button, [role='button'] {
   color: var(--color-dark-muted);
   border-color: var(--color-dark-border);
 }
+
+/* ─── Scroll reveal ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 600ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 100ms; }
+.reveal-delay-2 { transition-delay: 200ms; }
+.reveal-delay-3 { transition-delay: 300ms; }
+.reveal-delay-4 { transition-delay: 400ms; }

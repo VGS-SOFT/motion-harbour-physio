@@ -7,7 +7,15 @@ export default function Therapist() {
       <div className={`container ${styles.layout}`}>
         <div className={styles.imgCol}>
           <div className={styles.imgBox}>
-            <span className={styles.initials}>AB</span>
+            <img
+              src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80&auto=format&fit=crop&crop=face"
+              alt="Physiotherapist portrait"
+              width={480}
+              height={560}
+              loading="lazy"
+              decoding="async"
+              className={styles.therapistPhoto}
+            />
             <div className={styles.imgBadge}>
               <span className={styles.badgeNum}>AHPRA</span>
               <span className={styles.badgeSub}>Registered</span>
@@ -25,7 +33,7 @@ export default function Therapist() {
           <p className={styles.bio}>{therapist.bio}</p>
 
           <div className={styles.approachGrid}>
-            {therapist.approach.map(a => (
+            {therapist.approach.map((a: string) => (
               <div key={a} className={styles.approachItem}>
                 <span className={styles.tick}>✓</span>
                 <span>{a}</span>
