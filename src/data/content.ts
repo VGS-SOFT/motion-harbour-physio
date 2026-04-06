@@ -42,7 +42,7 @@ export const conditions = [
   { label: 'Lower Back Pain',    desc: 'The most common reason Australians see a physiotherapist.' },
   { label: 'Neck Pain & Stiffness', desc: 'Linked to desk posture, stress, and poor sleep position.' },
   { label: 'Shoulder Impingement', desc: 'Reduced range of motion and pain when lifting your arm.' },
-  { label: 'Knee Pain',           desc: 'Runner's knee, ligament strain, post-surgical rehab.' },
+  { label: 'Knee Pain',           desc: "Runner's knee, ligament strain, post-surgical rehab." },
   { label: 'Hamstring Strains',   desc: 'Acute muscle tears and chronic tightness in athletes.' },
   { label: 'Sciatica',            desc: 'Radiating pain from the lower back into the leg.' },
 ];
@@ -73,7 +73,7 @@ export const rebates = [
   },
   {
     title: 'WorkCover & DVA',
-    body: 'We accept WorkCover and Department of Veterans' Affairs referrals. Please bring your claim number and referral paperwork to your first visit.',
+    body: "We accept WorkCover and Department of Veterans' Affairs referrals. Please bring your claim number and referral paperwork to your first visit.",
   },
 ];
 
@@ -88,7 +88,7 @@ export const faqs = [
   },
   {
     q: 'Can I claim physiotherapy through my private health insurance?',
-    a: 'Yes, if you have physiotherapy included in your extras cover. We use HICAPS, which means you only pay the gap on the day. Check your fund's rebate amount before your appointment.',
+    a: "Yes, if you have physiotherapy included in your extras cover. We use HICAPS, which means you only pay the gap on the day. Check your fund's rebate amount before your appointment.",
   },
   {
     q: 'How many sessions will I need?',
