@@ -22,6 +22,19 @@ export default function Footer() {
           <p className={styles.copy}>© {new Date().getFullYear()} {clinic.name}. AHPRA registered physiotherapy practice.</p>
           <p className={styles.disclaimer}>This website is for informational purposes only and does not constitute medical advice. Always consult a qualified health professional.</p>
         </div>
+
+        <div className={styles.divider} />
+
+        <div className={styles.devCredit}>
+          <p className={styles.devText}>
+            Developed by <strong>Vraj Vithalani</strong>
+          </p>
+          <p className={styles.devContact}>
+            <a href="mailto:contact@vrajvithalani.com" className={styles.devLink}>contact@vrajvithalani.com</a>
+            <span className={styles.devSep}>/</span>
+            <a href="tel:+918460474721" className={styles.devLink}>8460474721</a>
+          </p>
+        </div>
       </div>
     </footer>
   );
