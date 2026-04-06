@@ -3,16 +3,19 @@ import styles from './FeesAndRebates.module.css';
 
 export default function FeesAndRebates() {
   return (
-    <section id="fees" className={`section section--grey ${styles.section}`}>
+    <section id="fees" className={`section section--white ${styles.section}`}>
       <div className="container">
-        <span className="section-label">Transparent pricing</span>
-        <h2 className="section-heading">Fees & rebates</h2>
-        <p className="section-sub" style={{ marginBottom: 'var(--space-10)' }}>
-          Straightforward pricing with on-the-spot claiming for private health insurance. No hidden costs.
-        </p>
+        <div className={styles.topRow}>
+          <div>
+            <span className="section-label">/ Transparent pricing</span>
+            <h2 className="section-heading">Fees &amp; <em>rebates</em></h2>
+          </div>
+          <p className="section-sub">Straightforward pricing with on-the-spot claiming for private health insurance. No hidden costs.</p>
+        </div>
+
         <div className={styles.layout}>
-          <div className={`float-card ${styles.feesCard}`}>
-            <h3 className={styles.cardTitle}>Appointment fees</h3>
+          <div className={styles.feesCard}>
+            <p className={styles.feesLabel}>/ Appointment fees</p>
             <ul className={styles.feeList}>
               {fees.map(f => (
                 <li key={f.label}>
@@ -21,10 +24,14 @@ export default function FeesAndRebates() {
                 </li>
               ))}
             </ul>
+            <a href="#contact" className="btn-arrow" style={{ marginTop: 'var(--space-2)' }}>
+              Book now <span className="arrow">→</span>
+            </a>
           </div>
+
           <div className={styles.rebatesCol}>
             {rebates.map(r => (
-              <div key={r.title} className={`float-card ${styles.rebateCard}`}>
+              <div key={r.title} className={styles.rebateItem}>
                 <h3 className={styles.rebateTitle}>{r.title}</h3>
                 <p className={styles.rebateBody}>{r.body}</p>
               </div>
