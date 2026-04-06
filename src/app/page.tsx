@@ -1,23 +1,25 @@
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+import WhoWeHelp from '@/components/WhoWeHelp';
+import Services from '@/components/Services';
+import Therapist from '@/components/Therapist';
+import FeesAndRebates from '@/components/FeesAndRebates';
+import FAQ from '@/components/FAQ';
+import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
+
 export default function Home() {
   return (
-    <main
-      style={{
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        fontFamily: 'sans-serif',
-        background: '#f7f6f2',
-        color: '#28251d',
-      }}
-    >
-      <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '0.5rem' }}>
-        Hello
-      </h1>
-      <p style={{ fontSize: '1.1rem', color: '#7a7974' }}>
-        Motion Harbour Physio — coming soon.
-      </p>
-    </main>
+    <>
+      <Navbar />
+      <Hero />
+      <WhoWeHelp />
+      <Services />
+      <Therapist />
+      <FeesAndRebates />
+      <FAQ />
+      <Contact />
+      <Footer />
+    </>
   );
 }

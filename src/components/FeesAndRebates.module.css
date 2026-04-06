@@ -1,0 +1,31 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+.feesCard { display: flex; flex-direction: column; gap: var(--space-4); }
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+.feeList { display: flex; flex-direction: column; gap: var(--space-3); }
+.feeList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-divider);
+  font-size: var(--text-sm);
+}
+.feeList li:last-child { border-bottom: none; padding-bottom: 0; }
+.feeLabel { color: var(--color-text-muted); }
+.feePrice { font-weight: 700; color: var(--color-primary); font-family: var(--font-display); font-size: var(--text-base); }
+.rebatesCol { display: flex; flex-direction: column; gap: var(--space-4); }
+.rebateCard { display: flex; flex-direction: column; gap: var(--space-2); }
+.rebateTitle { font-size: var(--text-sm); font-weight: 700; color: var(--color-text); }
+.rebateBody { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.65; }
+@media (max-width: 700px) { .layout { grid-template-columns: 1fr; } }

@@ -1,0 +1,14 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
+  gap: var(--space-4);
+}
+.card { display: flex; flex-direction: column; gap: var(--space-3); }
+.icon { font-size: 2rem; }
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-hero-text);
+}
+.desc { font-size: var(--text-sm); color: var(--color-hero-muted); line-height: 1.65; flex: 1; }
